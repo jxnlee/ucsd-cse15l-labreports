@@ -5,9 +5,11 @@
 ## Chosen Command: grep
 
 ## 1. Command Option 1: `-r`
+
 ### This command option can be applied in the format of `grep -r <string-pattern>` and allows the `grep` command to recursively read through files in directories for the given string pattern. The output for this command lists all of the files and all of the lines contained in those files that contain the specified string pattern. Below are a few examples:
 
 For this example I recursively searched through all the directories in the `technical` directory for the word `"everyone"` by writing `grep -r "everyone"`, this allows the command to scan through each of the files in each directory and search for lines that contain the given word `"everyone"` before outputting the line and filepath that contains the word. Here is the resulting output in the terminal:
+
 ```
 [cs15lsp23if@ieng6-202]:technical:112$ grep -r "everyone"
 911report/chapter-1.txt:    UAL 175: Yeah. We figured we'd wait to go to your center. Ah, we heard a suspicious transmission on our departure out of Boston, ah, with someone, ah, it sounded like someone keyed the mikes and said ah everyone ah stay in your seats.
@@ -99,6 +101,7 @@ plos/pmed.0020247.txt:        through casual contact, and outside they fear the 
 ```
 
 For this example I recursively searched through all the directories in the `technical` directory for the word `"apple"` by writing `grep -r "apple"`, this allows the command to scan through each of the files in each directory and search for lines that contain the given word `"apple"` before outputting the line and filepath that contains the word. Here is the resulting output in the terminal:
+
 ```
 [cs15lsp23if@ieng6-202]:technical:114$ grep -r "apple"
 911report/chapter-8.txt:                grappled with reports alleging plots in Yemen and Italy, as well as a report about a
@@ -124,12 +127,14 @@ plos/pmed.0010013.txt:        easier to grapple with a difficult, but ultimately
 
 This command option `-r` is useful as it allows one to identitify all of the lines and files in directories that contain a keyword. This can be used in situations where I am trying to collect all of the files that may contain information about something specific, rather than only being able to retrieve from a single file or a single directory, I can scan through multiple options of files and directories for the information one needs.
 
-*Source: I found out about this grep option from [this article about grep commands](https://www.tutorialspoint.com/unix_commands/grep.htm) and through the command `grep --help` pages*
+_Source: I found out about this grep option from [this article about grep commands](https://www.tutorialspoint.com/unix_commands/grep.htm) and through the command `grep --help` pages_
 
 ## 2. Command Option 2: `-l`
+
 ### This command option can be applied in the format of `grep -l <string-pattern> <filepath>` and allows the `grep` command to list all of the distinct files that contain the string matching to the given string-pattern. Below are a few examples:
 
 For this example I searched through all of the `txt` files in the `911report` directory in the `technical` directory for files that contain the string `"everyone"` by writing `grep -l "everyone" 911report/*.txt`, this allows the command to scan through all of the `txt` files (given by the pattern `*.txt`) and then return and output all of the distinct files that have the matching string value to the word `"everyone"`. Here is the resulting output in the terminal:
+
 ```
 [cs15lsp23if@ieng6-202]:technical:104$ grep -l "everyone" 911report/*.txt
 911report/chapter-1.txt
@@ -144,6 +149,7 @@ For this example I searched through all of the `txt` files in the `911report` di
 ```
 
 For this example I searched through all of the `txt` files in the `911report` directory in the `technical` directory for files that contain the string `"fire"` by writing `grep -l "fire" 911report/*.txt`, this allows the command to scan through all of the `txt` files (given by the pattern `*.txt`) and then return and output all of the distinct files that have the matching string value to the word `"fire"`. Here is the resulting output in the terminal:
+
 ```
 [cs15lsp23if@ieng6-202]:technical:105$ grep -l "fire" 911report/*.txt
 911report/chapter-1.txt
@@ -161,14 +167,17 @@ For this example I searched through all of the `txt` files in the `911report` di
 911report/chapter-7.txt
 911report/chapter-9.txt
 ```
+
 This command option `-l` is useful as it allows one to identify all of the distinct files that contain the information they are looking for (through the given string pattern). If one were to look only for the files that contain the information, the grep command (along with some other options) additionally outputting the lines that contain the information would add unnecessary noise to the output, making it more confusing since some files may have multiple references to the string, and therefore one would not need to account for repetition in files and can find the distinct files with the desired information through this `grep` command option.
 
-*Source: I found out about this grep option from [this article about grep commands](https://www.tutorialspoint.com/unix_commands/grep.htm) and through the command `grep --help` pages*
+_Source: I found out about this grep option from [this article about grep commands](https://www.tutorialspoint.com/unix_commands/grep.htm) and through the command `grep --help` pages_
 
 ## 3. Command Option 3: `-L`
+
 ### This command option can be applied in the format of `grep -L <string-pattern> <filepath>` and allows the `grep` command to list all of the distinct files that do not contain the string matching to the given string-pattern. This funcitons similar to the `-l` option but in the opposite case where you want the files that do not match with the given string pattern. Below are a few examples:
 
 For this example I searched through all of the `txt` files in the `911report` directory in the `technical` directory for files that do not contain the string `"everyone"` by writing `grep -L "everyone" 911report/*.txt`, this allows the command to scan through all of the `txt` files (given by the pattern `*.txt`) and then return and output all of the distinct files that do not have the matching string value to the word `"everyone"`. Here is the resulting output in the terminal:
+
 ```
 [cs15lsp23if@ieng6-202]:technical:110$ grep -L "everyone" 911report/*.txt
 911report/chapter-10.txt
@@ -182,20 +191,24 @@ For this example I searched through all of the `txt` files in the `911report` di
 ```
 
 For this example I searched through all of the `txt` files in the `911report` directory in the `technical` directory for files that do not contain the string `"fire"` by writing `grep -L "fire" 911report/*.txt`, this allows the command to scan through all of the `txt` files (given by the pattern `*.txt`) and then return and output all of the distinct files that do not have the matching string value to the word `"fire"`. Here is the resulting output in the terminal:
+
 ```
 [cs15lsp23if@ieng6-202]:technical:107$ grep -L "fire" 911report/*.txt
 911report/chapter-12.txt
 911report/chapter-8.txt
 911report/preface.txt
 ```
+
 This command option `-L` is useful as it functions similarly to teh `-l` command option but just the opposite as it allows one to identify all of the distinct files that do not contain information that one hopes to ignore (through the given string pattern). If one were to look only for the files that do not contain some information, the grep command (along with some other options) will make it difficult when you are trying to filter through files to search for specific information, and the lines that contain the information would add unnecessary noise to the output; all of this makes it more confusing. This `grep` command option allows one to better filter and sort through data when one knows what the files should not contain.
 
-*Source: I found out about this grep option from [this article about grep commands](https://www.tutorialspoint.com/unix_commands/grep.htm) and through the command `grep --help` pages*
+_Source: I found out about this grep option from [this article about grep commands](https://www.tutorialspoint.com/unix_commands/grep.htm) and through the command `grep --help` pages_
 
 ## 4. Command Option 4: `-c`
+
 ### This command option can be applied in the format of `grep -c <string-pattern> <filepath>` and allows the `grep` command to list all of the distinct files that contain matching string to the given string pattern along with the number of lines/times the given string occurs in the file. Below are a few examples:
 
 For this example I searched through all of the `txt` files in the `911report` directory in the `technical` directory for files and the lines in those files that contain the string `"everyone"` by writing `grep -c "everyone" 911report/*.txt`, this allows the command to scan through all of the `txt` files (given by the pattern `*.txt`) and their lines before returning and displaying their filepath that contains the word and the number of occurences of the string `"everyone"`. Here is the resulting output in the terminal:
+
 ```
 [cs15lsp23if@ieng6-202]:technical:109$ grep -c "everyone" 911report/*.txt
 911report/chapter-1.txt:2
@@ -218,6 +231,7 @@ For this example I searched through all of the `txt` files in the `911report` di
 ```
 
 For this example I searched through all of the `txt` files in the `911report` directory in the `technical` directory for files and the lines in those files that contain the string `"fire"` by writing `grep -c "fire" 911report/*.txt`, this allows the command to scan through all of the `txt` files (given by the pattern `*.txt`) and their lines before returning and displaying their filepath that contains the word and the number of occurences of the string `"fire"`. Here is the resulting output in the terminal:
+
 ```
 [cs15lsp23if@ieng6-202]:technical:106$ grep -c "fire" 911report/*.txt
 911report/chapter-1.txt:1
@@ -238,6 +252,7 @@ For this example I searched through all of the `txt` files in the `911report` di
 911report/chapter-9.txt:145
 911report/preface.txt:0
 ```
+
 This command option `-c` is useful as it allows one to have a quick glance and understand the distribution of the occurence of the given string pattern throughout the given directory of files. With this command option, one can understand how frequently certain words occur in the files and better identify which files may be of better use if we hope to find information pertaining to a subject. This command is especially useful as it provides a cursory and comprehensive glance at all of the files and how they could relate to the given string pattern. Rather than outputting specific lines or only looking at the files that may or may not contain a certain word, this command option providesa information on which files contain the word and how often certain files use them.
 
-*Source: I found out about this grep option from [this article about grep commands](https://www.tutorialspoint.com/unix_commands/grep.htm) and through the command `grep --help` pages*
+_Source: I found out about this grep option from [this article about grep commands](https://www.tutorialspoint.com/unix_commands/grep.htm) and through the command `grep --help` pages_
