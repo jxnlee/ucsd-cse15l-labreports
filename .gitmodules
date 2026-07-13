@@ -4,3 +4,6 @@
 [submodule "WeeklyTasks/Week3/lab3-week3"]
 	path = WeeklyTasks/Week3/lab3-week3
 	url = git@github.com:jxnlee/ucsd-cse15l-lab3-week3.git
+[submodule "WeeklyTasks/Week4/docsearch"]
+	path = WeeklyTasks/Week4/docsearch
+	url = git@github.com:jxnlee/ucsd-cse15l-docsearch.git
