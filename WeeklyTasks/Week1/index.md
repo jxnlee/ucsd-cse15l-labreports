@@ -22,7 +22,7 @@ Your discussion leader (the tutor/TA in your lab) will share a Google Doc with y
 
 Look up your course-specific account for CSE15L [here](https://sdacs.ucsd.edu/~icc/index.php)
 
-For help on resetting your password, here is a [tutorial](../assets/files/How%20to%20Reset%20Your%20CSE15L%20Password.pdf)
+For help on resetting your password, here is a [tutorial](assets/How%20to%20Reset%20Your%20CSE15L%20Password.pdf)
 
 Follow the onscreen instructions very carefully! Have someone watch you do it if you feel like it isn’t working.
 
@@ -36,7 +36,7 @@ Go to the [Visual Studio Code website](https://code.visualstudio.com/), and foll
 
 When it is installed, you should be able to open a window that looks like this (it might have different colors, or a different menu bar, depending on your system and settings):
 
-![/images/vscode.png](../assets/media/vscode.png)
+![/images/vscode.png](assets/vscode.png)
 
 **Write down in notes**: Everyone should share a screenshot of VScode open – help folks figure it out if it won’t install. If someone gets stuck, take a screenshot of the error message or point at which they are stuck so we can help them figure it out later, and they can decide to keep trying (potentially with the tutor helping) or move on.
 
@@ -160,13 +160,13 @@ This lab is a basic introduction to all of these. We will learn to use them in m
 This section will show you how to create a site with Github Pages that you’ll use for your lab reports.
 
 There are written instructions with screenshots below you can follow, and also a video version:
-![CSE15L Week 0: Github Pages](../assets/media/github_pages_tutorial.mp4)
+![CSE15L Week 0: Github Pages](assets/github_pages_tutorial.mp4)
 
 ### Make a Github Account
 
 Go to [https://www.github.com](https://www.github.com/) and create an account:
 
-![GitHub Signup](../assets/media/github_signup.png)
+![GitHub Signup](assets/github_signup.png)
 
 (If you already have an account, you choose if you want to use it or create a new one for this course).
 
@@ -176,19 +176,19 @@ You can choose any username you like for the account; it doesn’t have to be re
 
 Once you’ve created your account, we are going to *create a new repository* on Github. A *repository* is a folder or directory with an associated history of changes that were made to the files within it. In this sense, a repository on Github has some similarities to a folder in Google Drive; the differences are mainly in the level of control we get in managing that history of changes.
 
-![New Repository](../assets/media/new_repository.png)
+![New Repository](assets/new_repository.png)
 
 Name the repository `cse15l-lab-reports` (in my screenshot it looks like the name is taken because I made it before taking the screenshot; it will be green and OK for you). Leave the other settings as they are, and click “Create Repository” at the bottom.
 
-![Create Repository](../assets/media/create_repo.png)
+![Create Repository](assets/create_repo.png)
 
 You should see a screen like this (but with your username):
 
-![New Repository Screen](../assets/media/new_repo_screen.png)
+![New Repository Screen](assets/new_repo_screen.png)
 
 Click the “Create a new file” link (small, in blue, beneath the “Set up in Desktop” button). Make a new file called `index.md`, and put some text in it (whatever you like).
 
-![Hello World](../assets/media/hello_world.png)
+![Hello World](assets/hello_world.png)
 
 Scroll down to the bottom of the page and click “Commit new file”. You should see a view of your repository that now lists a file called `index.md`.
 
@@ -198,17 +198,17 @@ You have a public Github repository with some text in it! You can copy the link 
 
 Next, click on “Settings” at the top of your repository, and then choose the “Pages” option in the sidebar:
 
-![Settings Repo Button](../assets/media/settings-repo-button.png)
+![Settings Repo Button](assets/settings-repo-button.png)
 
-![Github Pages Branch](../assets/media/github-pages-branch.png)
+![Github Pages Branch](assets/github-pages-branch.png)
 
 Choose `main` as the source for Github Pages, and click “Save”.
 
-![Github Pages Link](../assets/media/github-pages-link.png)
+![Github Pages Link](assets/github-pages-link.png)
 
 At the top it’ll say “GitHub Pages source saved”. Wait a bit and refresh the page. Eventually you’ll see a message that says “Your site is live at `<url here>`.” (This can take a few minutes!) Click the link that’s shown there; at first it will say the page isn’t found. Wait a few minutes, then refresh the page. Then you should see the text you wrote show up on a page like this:
 
-![Hello World Page Load](../assets/media/hello-world-page-load.png)
+![Hello World Page Load](assets/hello-world-page-load.png)
 
 Note that in addition to seeing your file at, e.g, [https://jpolitz.github.io/cse-15l-lab-report/](https://jpolitz.github.io/cse-15l-lab-report/), you can also see it with `index.html` added to the end of the URL: [https://jpolitz.github.io/cse-15l-lab-report/index.html](https://jpolitz.github.io/cse-15l-lab-report/index.html) (Try it!).
 
