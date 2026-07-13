@@ -1,0 +1,3 @@
+[submodule "WeeklyTasks/Week2/wavelet"]
+	path = WeeklyTasks/Week2/wavelet
+	url = git@github.com:jxnlee/ucsd-cse15l-wavelet.git
