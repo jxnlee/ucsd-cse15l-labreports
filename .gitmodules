@@ -13,3 +13,9 @@
 [submodule "WeeklyTasks/Week7/lab7"]
 	path = WeeklyTasks/Week7/lab7
 	url = git@github.com:jxnlee/ucsd-cse15l-lab7.git
+[submodule "WeeklyTasks/Week8/grader-review-etang0"]
+	path = WeeklyTasks/Week8/grader-review-etang0
+	url = git@github.com:jxnlee/ucsd-cse15l-grader-review-etang0.git
+[submodule "WeeklyTasks/Week8/grader-review-jxnlee"]
+	path = WeeklyTasks/Week8/grader-review-jxnlee
+	url = git@github.com:jxnlee/ucsd-cse15l-grader-review-jxnlee.git
